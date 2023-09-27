@@ -1,0 +1,28 @@
+@import "./reset.scss";
+
+$color1: rgb(12, 142, 71);
+
+@mixin dialogBox($backgroundColor, $width) {
+  width: $width;
+  padding: 10px;
+  background-color: $backgroundColor;
+  border: 1px solid #000;
+  margin: 40px auto;
+  position: relative;
+}
+
+.dialog {
+  @include dialogBox($color1, 310px);
+
+  &::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: $color1;
+    border: 1px solid #000;
+    position: absolute;
+    top: -6px;
+    right: 50%;
+    transform: translateX(50%) rotate(45deg);
+  }
+}

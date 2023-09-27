@@ -1,0 +1,18 @@
+@import "reset.scss";
+@import "general.scss";
+
+$gold: #ffda69;
+
+.centered-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: $gold;
+
+  p {
+    width: 100px;
+    font-size: 3rem;
+  }
+}

@@ -1,0 +1,14 @@
+@use "sass:color";
+@use "sass:list";
+
+$baseColor: #2325b8;
+$secondColor: lighten($baseColor, 30%);
+$thirdColor: darken($baseColor, 40%);
+
+$colors: $baseColor $secondColor $thirdColor;
+
+@for $i from 1 through 3 {
+  .section-#{$i} {
+    border: 5px solid list.nth($colors, $i);
+  }
+}
